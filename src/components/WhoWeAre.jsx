@@ -48,9 +48,9 @@ const WhoWeAre = () => {
             </svg>
           </Link>
         </div>
-        <div className="mt-12 mb-5 ">
+        <div className="mt-12 mb-20 px-4">
           <Carousel
-            showThumbs={true}
+            showThumbs={false}
             swipeable={true}
             emulateTouch={true}
             autoPlay={true}
@@ -60,18 +60,21 @@ const WhoWeAre = () => {
               <img
                 alt="img"
                 src={piggyMoney}
+                className="h-[22rem]"
               />
             </div>
             <div>
               <img
                 alt="img"
                 src={moneyGrow}
+                className="h-[22rem]"
               />
             </div>
             <div>
               <img
                 alt="img"
                 src={putMoney}
+                className="h-[22rem]"
               />
             </div>
           </Carousel>
