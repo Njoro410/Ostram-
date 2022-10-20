@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar-center:hover {
-    all: unset;
+body {
+  overflow-x: hidden;
 }
+
+.stroke {
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 

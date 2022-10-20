@@ -4,7 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+
+    extend: {
+      fontFamily: {
+        mont: ['Montserrat', 'sans-serif'],
+        yanone: ['Yanone Kaffeesatz', "sans-serif"],
+        play:['Playfair Display', 'serif']
+      }
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    // require("tailwindcss-named-groups"),
+  ],
 }

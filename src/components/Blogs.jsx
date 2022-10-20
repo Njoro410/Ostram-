@@ -1,125 +1,285 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import logo from "../images/moneygrow.jpg"
+// import Swiper from 'react-id-swiper';
 
 const Blogs = () => {
+
   return (
-    <div className="w-full h-full bg-slate-100">
-      <section class=" ">
-        <div class="container px-6 py-10 mx-auto">
-          <div class="text-center">
-            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
-              From the blog
-            </h1>
-
-            <p class="max-w-lg mx-auto mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              veritatis sint autem nesciunt, laudantium quia tempore delect
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-3">
-            <div>
-              <img
-                class="relative z-10 object-cover w-full rounded-md h-96"
-                src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-
-              <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow ">
-                <a
-                  href="#"
-                  class="font-semibold text-gray-800 hover:underline  md:text-xl"
-                >
-                  All the features you want to know
-                </a>
-
-                <p class="mt-3 text-sm text-gray-500 ay-300 md:text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  veritatis sint autem nesciunt, laudantium quia tempore delect
-                </p>
-                <div className="flex justify-between">
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Ostram Sacco</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">21 October 2019</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Read more...</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img
-                class="relative z-10 object-cover w-full rounded-md h-96"
-                src="https://images.unsplash.com/photo-1644018335954-ab54c83e007f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-
-              <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow ">
-                <a
-                  href="#"
-                  class="font-semibold text-gray-800 hover:underline  md:text-xl"
-                >
-                  All the features you want to know
-                </a>
-
-                <p class="mt-3 text-sm text-gray-500 ay-300 md:text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  veritatis sint autem nesciunt, laudantium quia tempore delect
-                </p>
-                <div className="flex justify-between">
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Ostram Sacco</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">21 October 2019</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Read more...</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img
-                class="relative z-10 object-cover w-full rounded-md h-96"
-                src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-
-              <div class="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow ">
-                <a
-                  href="#"
-                  class="font-semibold text-gray-800 hover:underline  md:text-xl"
-                >
-                  How to use sticky note for problem solving
-                </a>
-
-                <p class="mt-3 text-sm text-gray-500 ay-300 md:text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  veritatis sint autem nesciunt, laudantium quia tempore delect
-                </p>
-
-                <div className="flex justify-between">
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Ostram Sacco</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">21 October 2019</p>
-                  </div>
-                  <div>
-                    <p class="mt-3 text-sm text-blue-500">Read more...</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="py-6 bg-slate-200 sm:py-12  dark:bg-gray-800 dark:text-gray-100">
+      <div className="container p-6 mx-auto space-y-8">
+        <div className="space-y-2 text-center">
+          <h2 className="text-3xl font-bold font-play">Latest from the <span className="text-orange-500">blog</span> </h2>
+          <p className=" text-lg md:text-2xl font-yanone dark:text-gray-400">
+            Read the latest news on matters SACCOs and activities around Ostram
+            Sacco
+          </p>
         </div>
-      </section>
-    </div>
+        <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4 md:hidden">
+          <Carousel showThumbs={false} showArrows={false} autoPlay={true} infiniteLoop={true}>
+        
+          
+          <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Info
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                  Why you should join a sacco
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 1, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+
+         
+              <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Meeting
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                    5th Annual General Meeting
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 2, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+
+              <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Loans
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                    Launch of Wezesha Loan
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 3, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+           
+        
+          </Carousel>
+        </div>
+
+
+        <div className="md:grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 hidden ">
+          
+        
+          
+              <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Info
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                  Why join Ostram Sacco
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 1, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+
+         
+              <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Meeting
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                    5th Annual General Meeting
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 2, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+
+              <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src={logo}
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Loans
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                    Launch of Wezesha Loan
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 3, 2020</span>
+                    <span>Read More</span>
+                  </div>
+                </div>
+              </article>
+
+              {/* <article className="flex flex-col dark:bg-gray-900">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  aria-label="Te nulla oportere reprimique his dolorum"
+                >
+                  <img
+                    alt=""
+                    className="object-cover w-full h-52 dark:bg-gray-500"
+                    src="https://source.unsplash.com/200x200/?fashion?4"
+                  />
+                </a>
+                <div className="flex flex-col flex-1 p-6">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  ></a>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+                  >
+                    Convenire
+                  </a>
+                  <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+                    Te nulla oportere reprimique his dolorum
+                  </h3>
+                  <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                    <span>June 4, 2020</span>
+                    <span>2.4K views</span>
+                  </div>
+                </div>
+              </article> */}
+           
+        
+          
+        </div>
+      </div>
+    </section>
   );
 };
 
