@@ -1,83 +1,82 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
+import putMoney from "../images/putmoney.jpg"
+import piggyMoney from "../images/piggymoney.jpg"
+import moneyGrow from "../images/moneygrow.jpg"
 
 const WhoWeAre = () => {
   return (
-    <div className="container mx-auto grid md:grid-cols-2 mt-6">
-      <section>
-        <h1 className="text-4xl px-8">About Ostram Traders Sacco</h1>
-        <p className="text-justify px-8 py-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-          similique ea porro expedita qui? Accusantium distinctio pariatur quo
-          aliquid officiis rerum, debitis assumenda totam rem, perferendis
-          molestiae, excepturi facere eum?
-        </p>
-        <p className="text-justify px-8 py-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-          similique ea porro expedita qui? Accusantium distinctio pariatur quo
-          aliquid officiis rerum, debitis assumenda totam rem, perferendis
-          molestiae, excepturi facere eum?
-        </p>
-        <a
-          href="#_"
-          className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
-        >
-          <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
-          <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+    <div className=" bg-slate-100 text-gray-800 dark:bg-gray-800 dark:text-slate-100 h-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  container mx-auto">
+        <div className="px-8 mt-12 text-justify">
+          <h3 className="font-bold font-play text-2xl md:text-4xl group">
+            ABOUT <span className="text-orange-500">US</span>
+          </h3>
+          <div className="flex">
+            <span className="w-12 h-1 mb-6 rounded-lg bg-orange-400"></span>
+          </div>
+          <p className="font-light">
+            Ostram Traders Sacco Society is a leading sacco based in Kajiado
+            Central. We provide quality financial services to individuals, chamas and
+            businesses operating in kajiado town and other sub-counties within Kajiado
+            central.
+            <br />
+            <br/>
+            Ostram Sacco was founded in 2015 to address the financial needs of
+            people and business at a smaller, quicker and reliable scale. Since
+            then, Ostram Sacco has grown to become the most reliable sacco in Kajiado central and it environs.
+          </p>
+          <Link
+            className="btn flex gap-3  group px-5 w-full mt-4 lg:mt-12 py-3  border bg-gray-800 text-yellow-400  text-center"
+            to="/about"
+          >
+            Read More
             <svg
-              className="w-5 h-5 text-green-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 group-hover:translate-x-5 transition-transform"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path>
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
             </svg>
-          </span>
-          <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-            <svg
-              className="w-5 h-5 text-green-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path>
-            </svg>
-          </span>
-          <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-            Button Text
-          </span>
-        </a>
-      </section>
-      <section>
-        <Carousel>
-          <div className="relative">
-            <img
-              className=""
-              src="https://taxplanningideas.com/wp-content/uploads/2021/12/4.png"
-            />
-          </div>
-          <div className="relative">
-            <img src="https://taxplanningideas.com/wp-content/uploads/2021/12/4.png" />
-            <p className="legend">Legend 2</p>
-          </div>
-          <div>
-            <img src="https://taxplanningideas.com/wp-content/uploads/2021/12/4.png" />
-            <p className="legend">Legend 3</p>
-          </div>
-        </Carousel>
-      </section>
+          </Link>
+        </div>
+        <div className="mt-12 mb-5 ">
+          <Carousel
+            showThumbs={true}
+            swipeable={true}
+            emulateTouch={true}
+            autoPlay={true}
+            infiniteLoop={true}
+          >
+            <div>
+              <img
+                alt="img"
+                src={piggyMoney}
+              />
+            </div>
+            <div>
+              <img
+                alt="img"
+                src={moneyGrow}
+              />
+            </div>
+            <div>
+              <img
+                alt="img"
+                src={putMoney}
+              />
+            </div>
+          </Carousel>
+        </div>
+      </div>
     </div>
   );
 };
