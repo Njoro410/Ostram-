@@ -132,7 +132,7 @@ const Footer = () => {
                 </nav>
               </div>
 
-              <div className="text-center sm:text-left hidden md:flex">
+              <div className="text-center sm:text-left hidden md:block">
                 <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
                   Our Services
                 </p>
@@ -178,7 +178,7 @@ const Footer = () => {
                 </nav>
               </div>
 
-              <div className="text-center sm:text-left hidden md:flex">
+              <div className="text-center sm:text-left hidden md:block">
                 <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
                   Helpful Links
                 </p>
