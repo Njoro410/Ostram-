@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="p-6 py-12 dark:bg-violet-400 dark:text-gray-900">
+    <div className="p-6 md:py-12 bg-orange-500">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <h2 className="text-center text-6xl tracking-tighter font-bold">
+          <h2 className="text-center text-4xl md:text-7xl tracking-tighter font-extrabold font-yanone dark:text-gray-800">
             Try our new wezesha loan
           </h2>
-          <a
-            href="#"
-            rel="noreferrer noopener"
-            className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400"
+          <Link
+            to="/loans"
+            className="px-5 mt-4 lg:mt-0 py-3 rounded-md btn"
           >
-            Shop Now
-          </a>
+            See More
+          </Link>
         </div>
       </div>
     </div>
