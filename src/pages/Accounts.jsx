@@ -1,8 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const Accounts = () => {
   return (
     <div className="dark:bg-gray-800 dark:text-white text-gray-800">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Accounts</title>
+        <meta
+          name="description"
+          content="The various types of accounts we have at Ostram Sacco"
+        />
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -21,7 +30,9 @@ const Accounts = () => {
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2">
         <div className="border-r-2 px-6">
-          <p className="text-4xl text-center py-6"><span className="text-orange-500">Savings</span> Account</p>
+          <p className="text-4xl text-center py-6">
+            <span className="text-orange-500">Savings</span> Account
+          </p>
           <p className="text-justify">
             This account gives a member access to loans, contribution should be
             made on a regular basis. If lump sum amount is deposited, a member
@@ -43,12 +54,16 @@ const Accounts = () => {
           </p>
         </div>
         <div className="px-6">
-        <p className="text-4xl text-center py-6"><span className="text-orange-500">Deposits</span> Account</p>
+          <p className="text-4xl text-center py-6">
+            <span className="text-orange-500">Deposits</span> Account
+          </p>
           <p>
             This account gives you access to unlimited withdrawals, withdrawals
             can be made at any time without prior notice. No interest is offered
-            for the deposits account. <br/><br/>The sacco charges a fee of Kshs.50/= for
-            all withdrawals partaining to this account.
+            for the deposits account. <br />
+            <br />
+            The sacco charges a fee of Kshs.50/= for all withdrawals partaining
+            to this account.
           </p>
         </div>
       </div>

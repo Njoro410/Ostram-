@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import { motion } from "framer-motion";
 import { useDetectClickOutside } from "react-detect-click-outside";
-import OutsideClickHandler from "react-outside-click-handler";
+// import OutsideClickHandler from "react-outside-click-handler";
 import { Link } from "react-router-dom";
 
 const Mobile = ({ nav, close }) => {

@@ -1,8 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const Board = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>B.O.D</title>
+        <meta name="description" content="Members of the board" />
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -29,50 +36,10 @@ const Board = () => {
             />
 
             <div className="p-4 bg-gray-900">
-              <h5 className="text-3xl md:text-4xl text-yellow-400">
-                John Doe
-              </h5>
-
-
+              <h5 className="text-3xl md:text-4xl text-yellow-400">John Doe</h5>
             </div>
           </a>
         </div>
-        <div className="mx-auto p-5">
-          <a href="#" className="block overflow-hidden rounded-2xl">
-            <img
-              alt="Office"
-              src="https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg"
-              className="object-cover w-[22rem] h-56"
-            />
-
-            <div className="p-4 bg-gray-900">
-              <h5 className="text-3xl md:text-4xl text-yellow-400">
-                John Doe
-              </h5>
-
-
-            </div>
-          </a>
-        </div>
-
-        <div className="mx-auto p-5">
-          <a href="#" className="block overflow-hidden rounded-2xl">
-            <img
-              alt="Office"
-              src="https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg"
-              className="object-cover w-[22rem] h-56"
-            />
-
-            <div className="p-4 bg-gray-900">
-              <h5 className="text-3xl md:text-4xl text-yellow-400">
-                Jane Doe
-              </h5>
-
-
-            </div>
-          </a>
-        </div>
-
         <div className="mx-auto p-5">
           <a href="#" className="block overflow-hidden rounded-2xl">
             <img
@@ -83,8 +50,6 @@ const Board = () => {
 
             <div className="p-4 bg-gray-900">
               <h5 className="text-3xl md:text-4xl text-yellow-400">John Doe</h5>
-
-
             </div>
           </a>
         </div>
@@ -99,8 +64,6 @@ const Board = () => {
 
             <div className="p-4 bg-gray-900">
               <h5 className="text-3xl md:text-4xl text-yellow-400">Jane Doe</h5>
-
-
             </div>
           </a>
         </div>
@@ -115,7 +78,34 @@ const Board = () => {
 
             <div className="p-4 bg-gray-900">
               <h5 className="text-3xl md:text-4xl text-yellow-400">John Doe</h5>
+            </div>
+          </a>
+        </div>
 
+        <div className="mx-auto p-5">
+          <a href="#" className="block overflow-hidden rounded-2xl">
+            <img
+              alt="Office"
+              src="https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg"
+              className="object-cover w-[22rem] h-56"
+            />
+
+            <div className="p-4 bg-gray-900">
+              <h5 className="text-3xl md:text-4xl text-yellow-400">Jane Doe</h5>
+            </div>
+          </a>
+        </div>
+
+        <div className="mx-auto p-5">
+          <a href="#" className="block overflow-hidden rounded-2xl">
+            <img
+              alt="Office"
+              src="https://as1.ftcdn.net/v2/jpg/01/16/24/44/1000_F_116244459_pywR1e0T3H7FPk3LTMjG6jsL3UchDpht.jpg"
+              className="object-cover w-[22rem] h-56"
+            />
+
+            <div className="p-4 bg-gray-900">
+              <h5 className="text-3xl md:text-4xl text-yellow-400">John Doe</h5>
             </div>
           </a>
         </div>

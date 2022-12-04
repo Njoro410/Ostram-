@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../images/Logo.png";
 
 const Footer = () => {
@@ -94,39 +95,38 @@ const Footer = () => {
                 <nav className="mt-8">
                   <ul className="space-y-4 text-sm">
                     <li>
-                      <a
+                      <Link to="/about"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
                       >
                         Who We Are
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="/board"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
+
                       >
                         Board Members
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="office"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
+                      
                       >
                         Office Staff
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link
                         className="text-gray-700 transition hover:text-gray-700/75 "
-                        href="/"
+                        
                       >
                         Careers
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -140,39 +140,37 @@ const Footer = () => {
                 <nav className="mt-8">
                   <ul className="space-y-4 text-sm">
                     <li>
-                      <a
+                      <Link to="/accounts"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
+                     
                       >
                         Accounts
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="/deposits"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
+                        
                       >
                         Deposits
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="/loans"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
                       >
                         Loans
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="/savings"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
                       >
                         Savings
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -186,27 +184,24 @@ const Footer = () => {
                 <nav className="mt-8">
                   <ul className="space-y-4 text-sm">
                     <li>
-                      <a
+                      <Link to="/faq"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
                       >
                         FAQs
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link to="/downloads"
                         className="text-gray-700 transition hover:text-gray-700/75 dark:text-gray-400"
-                        href="/"
                       >
                         Downloads
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a
+                      <Link
                         className="group flex justify-center gap-1.5 sm:justify-start"
-                        href="/"
                       >
                         <span className="text-gray-700 transition group-hover:text-gray-700/75 ">
                           Live Chat
@@ -216,7 +211,7 @@ const Footer = () => {
                           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"></span>
                           <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-500"></span>
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -227,9 +222,10 @@ const Footer = () => {
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
+                    
                     <a
                       className="flex items-center justify-center gap-1.5 sm:justify-start"
-                      href="/"
+                      href="mailto:ostramsacco01@gmail.com"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -253,9 +249,10 @@ const Footer = () => {
                   </li>
 
                   <li>
+                
                     <a
                       className="flex items-center justify-center gap-1.5 sm:justify-start"
-                      href="/"
+                      href="tel:+254740790988"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

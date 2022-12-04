@@ -1,11 +1,16 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
-import piggy from "../images/piggymoney.jpg"
+import piggy from "../images/piggymoney.jpg";
 
 const Junior = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Junior Membership</title>
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -34,11 +39,7 @@ const Junior = () => {
         <div className="mt-12 ">
           <Carousel showIndicators={false} showThumbs={false}>
             <div>
-              <img
-                alt="saving money"
-                src={piggy}
-                className="mb-5 h-52"
-              />
+              <img alt="saving money" src={piggy} className="mb-5 h-52" />
             </div>
           </Carousel>
         </div>

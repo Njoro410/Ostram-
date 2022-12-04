@@ -1,11 +1,16 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import piggy from "../images/piggysave.jpg"
-import seed from "../images/moneyseed.jpg"
+import piggy from "../images/piggysave.jpg";
+import seed from "../images/moneyseed.jpg";
+import { Helmet } from "react-helmet";
 
 const Savings = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Savings Accounts</title>
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -44,18 +49,10 @@ const Savings = () => {
         <div className="mt-12 ">
           <Carousel>
             <div>
-              <img
-                alt="saving money"
-                src={piggy}
-              />
-              <p className="legend">Legend 1</p>
+              <img alt="saving money" src={piggy} />
             </div>
             <div>
-              <img
-                alt="saving money"
-                src={seed}
-              />
-              <p className="legend">Legend 2</p>
+              <img alt="saving money" src={seed} />
             </div>
           </Carousel>
         </div>

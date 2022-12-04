@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import hands from "../images/hands.png"
@@ -6,6 +7,14 @@ import hands from "../images/hands.png"
 const Chama = () => {
   return (
     <div>
+            <Helmet>
+        <meta charSet="utf-8" />
+        <title>Joint/Chama Membership</title>
+        <meta
+          name="description"
+          content="Chama/Joint Membership"
+        />
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">

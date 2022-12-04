@@ -44,9 +44,7 @@ function App() {
         <Details />
         <Navbar />
         <ScrollTop />
-        {/* <div className="bg-gray-800 text-white"> */}
           <Routes>
-
             <Route exact path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/board' element={<Board />} />
@@ -65,7 +63,6 @@ function App() {
             <Route path='/junior' element={<Junior />} />
             <Route path='/guarantorship' element={<Guarantorship />} />
           </Routes>
-        {/* </div> */}
         <Footer />
       </BrowserRouter>
     </div>

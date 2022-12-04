@@ -10,7 +10,7 @@ const WhoWeAre = () => {
     <div className=" bg-slate-100 text-gray-800 dark:bg-gray-800 dark:text-slate-100 h-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  container mx-auto">
         <div className="px-8 mt-12 text-justify">
-          <h3 className="font-bold font-play text-2xl md:text-4xl group">
+          <h3 className="font-bold font-play text-2xl md:text-4xl group drop-shadow-2xl">
             ABOUT <span className="text-orange-500">US</span>
           </h3>
           <div className="flex">

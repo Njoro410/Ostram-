@@ -2,10 +2,15 @@ import { Disclosure } from "@headlessui/react";
 import React from "react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const FAQ = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>F.A.Qs</title>
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -158,7 +163,7 @@ const FAQ = () => {
                 >
                   Loan interest for all loans except Wezesha Loan is 1.2% per
                   month. Wezesha loan attracts an interest of 1%.
-<br/>
+                  <br />
                   The loan processing fee is 1.2% of the total amount requested.
                 </Disclosure.Panel>
               </>

@@ -1,8 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <div className="w-full h-full text-gray-800 dark:text-white">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About Us</title>
+        <meta
+          name="description"
+          content="About Ostram Traders Sacco Society Limited"
+        />
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -17,11 +26,12 @@ const About = () => {
         <p className="">
           Ostram Traders Sacco was founded in 2015 after discovering a need to
           provide quality financial services for people and businesses operating
-          in Kajiado Central. <br/><br/>Our services are top notch hence why over the
-          years we have been able to gain the trust of people and businesses.
-          Ostram started operating in Kajiado Town but demand grew and hence we
-          expanded our services to Il-Bissil, Isinya, M-46, Sajiloni and
-          Enkorika.
+          in Kajiado Central. <br />
+          <br />
+          Our services are top notch hence why over the years we have been able
+          to gain the trust of people and businesses. Ostram started operating
+          in Kajiado Town but demand grew and hence we expanded our services to
+          Il-Bissil, Isinya, M-46, Sajiloni and Enkorika.
           <br />
           <br />
           Our Agents go to these towns in different days of the week to collect
@@ -30,7 +40,8 @@ const About = () => {
           save without having to come to the office.
           <br />
           Members can also use MPESA via Lipa na Family to contribute or pay
-          their loans. Use{" "}<br/><br/>
+          their loans. Use <br />
+          <br />
           <span className="text-orange-500">
             *Paybill Number - 222111* *Account Number - 169986* *Business Name -
             Ostram Traders Sacco*

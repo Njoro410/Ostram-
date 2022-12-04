@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import individualPerson from "../images/individual.jpg";
@@ -6,6 +7,10 @@ import individualPerson from "../images/individual.jpg";
 const Individual = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Individual Membership</title>
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
