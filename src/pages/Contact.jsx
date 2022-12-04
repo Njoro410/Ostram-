@@ -1,8 +1,76 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Helmet } from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
+import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  //email
+
+  const nameRef = useRef(null);
+  const mailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const form = useRef();
+
+  const captchaRef = useRef();
+
+  const sendEmail = (e) => {
+    emailjs
+      .sendForm(
+        "service_s38ry0n",
+        "template_evwf50i",
+        form.current,
+        "UfPUtIxYNSr_hAtqq"
+      )
+      .then(
+        (result) => {
+          nameRef.current.value = "";
+          mailRef.current.value = "";
+          messageRef.current.value = "";
+          Toast.fire({
+            icon: "success",
+            title: "Message sent",
+          });
+          console.log(result.text);
+        },
+        (error) => {
+          Toast.fire({
+            icon: "error",
+            title: "Error, not sent",
+          });
+        }
+      );
+  };
+
+  async function onExpired(value) {
+    await Toast.fire({
+      icon: "error",
+      title: "reCAPTCHA Expired",
+    });
+  }
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-right",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 3500,
+    timerProgressBar: true,
+  });
   return (
     <div className="w-full bg-slate-100 font-Acme border-b-2">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact Us</title>
+        <meta
+          name="description"
+          content="Reach out to us and we'll get back as soon as possible"
+        />
+      </Helmet>
       <div className="p-6 py-12 bg-orange-500">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center">
@@ -49,7 +117,7 @@ const Contact = () => {
                   P.O Box 87 - 01100
                   <br />
                   Kajiado Main Stage Safaricom House
-                  <br/>
+                  <br />
                   Kajiado,Kenya
                 </span>
               </p>
@@ -91,44 +159,57 @@ const Contact = () => {
               </p>
 
               <p className="flex items-center">
-              <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-12 h-12 bg-slate-300 px-2 py-2 mr-2 rounded"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-12 h-12 bg-slate-300 px-2 py-2 mr-2 rounded"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
 
-                      <span className="text-gray-700 ">
-                        <span className="text-orange-500">Working Hours</span><br/>
-                        <span>Mon-Fri: 8:00 AM - 5:00 PM</span><br/>
-                        <span>Saturdays: 9:00 AM - NOON</span><br/>
-                        <span>Closed on Sundays and Public Holidays</span>
-                      </span>
+                <span className="text-gray-700 ">
+                  <span className="text-orange-500">Working Hours</span>
+                  <br />
+                  <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+                  <br />
+                  <span>Saturdays: 9:00 AM - NOON</span>
+                  <br />
+                  <span>Closed on Sundays and Public Holidays</span>
+                </span>
               </p>
             </div>
           </div>
         </div>
         <div>
           <section className="p-6 text-slate-500">
-            <form className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow-xl bg-slate-100">
+            <form
+              id="cont"
+              ref={form}
+              onSubmit={(event) => {
+                event.preventDefault();
+                captchaRef.current.execute();
+              }}
+              className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow-xl bg-slate-100"
+            >
               <div>
                 <label for="name" className="block mb-1 ml-1">
                   Name
                 </label>
                 <input
+                  name="name"
+                  ref={nameRef}
                   id="name"
                   type="text"
                   placeholder="Your name"
-                  required=""
-                  className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
+                  required
+                  className="block text-black w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
                 />
               </div>
               <div>
@@ -136,11 +217,13 @@ const Contact = () => {
                   Email
                 </label>
                 <input
+                  name="email"
+                  ref={mailRef}
                   id="email"
                   type="email"
                   placeholder="Your email"
-                  required=""
-                  className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
+                  required
+                  className="block text-black w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
                 />
               </div>
               <div>
@@ -149,11 +232,22 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  ref={messageRef}
                   type="text"
                   placeholder="Message..."
-                  className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
+                  className="block text-black w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 bg-slate-300"
                 ></textarea>
               </div>
+              <ReCAPTCHA
+                sitekey="6LcMjVQjAAAAAI5onnD9l8UcqPDXu2EA6C-DVswM"
+                size="invisible"
+                theme="light"
+                ref={captchaRef}
+                onChange={sendEmail}
+                onExpired={onExpired}
+                badge="inline"
+              />
               <div>
                 <button type="submit" className="btn w-full bg-orange-500">
                   Send
