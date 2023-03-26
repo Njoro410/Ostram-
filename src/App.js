@@ -1,9 +1,6 @@
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import Navbar from "./components/Navbar";
-import Details from "./components/Details";
-import Footer from "./components/Footer";
 import Board from "./pages/Board";
 import Office from "./pages/Office";
 import Loans from "./pages/Loans";
@@ -22,6 +19,8 @@ import Junior from "./pages/Junior";
 import Guarantorship from "./pages/Guarantorship";
 import { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Verify from "./pages/Verify";
+import Layout from "./components/Layout";
 
 function App() {
 
@@ -41,10 +40,9 @@ function App() {
     <div className="font-mont dark:text-white">
       <BrowserRouter>
         <ScrollToTop smooth color="#f97316" className="flex justify-center items-center" />
-        <Details />
-        <Navbar />
         <ScrollTop />
           <Routes>
+            <Route path='' element={<Layout/>} >
             <Route exact path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/board' element={<Board />} />
@@ -62,8 +60,10 @@ function App() {
             <Route path='/chama' element={<Chama />} />
             <Route path='/junior' element={<Junior />} />
             <Route path='/guarantorship' element={<Guarantorship />} />
+            <Route path='/verify/:id' element={<Verify />} />
+            </Route>
+          
           </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
