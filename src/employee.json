@@ -1,0 +1,29 @@
+{
+    "employees" : [
+        {
+          "id": "adwin001",
+          "name": "Edwin Njoroge",
+          "designation": "Customer Service Officer",
+          "department": "Customer Service"
+        },
+        {
+          "id": "rob001",
+          "name": "Robert Linti",
+          "designation": "Customer Service Officer",
+          "department": "Customer Service"
+        },
+        {
+          "id": "ann002",
+          "name": "Ann Nzilani",
+          "designation": "Customer Service Officer",
+          "department": "Customer Service"
+        },
+        {
+          "id": "ann001",
+          "name": "Ann Njoroge",
+          "designation": "Operations Manager",
+          "department": "Management"
+        }
+      ]
+}
+
