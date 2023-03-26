@@ -34,6 +34,7 @@
     "react-slick": "^0.29.0",
     "rsuite": "^5.19.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.7.3",
     "swiper": "^8.4.4",
     "tailwindcss-scoped-groups": "^2.0.0",
     "use-click-outside-close": "^1.0.5",
